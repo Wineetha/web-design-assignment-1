@@ -1,6 +1,6 @@
 /* === Customizable Settings === */
 :root {
-  --background-image: url('images/ve1.jpg');
+  --background-image: url('Images/ve1.jpg');
   --overlay-color: rgba(0, 0, 0, 0.85);
   --text-color: #ffffff;
   --nav-bg-color: rgba(0, 0, 0, 0.7);
@@ -149,7 +149,7 @@ nav a:hover {
 
 /* Step Page Specific */
 body.step-page::before {
-  background-image: url('images/ve4.jpg');
+  background-image: url('Images/ve4.jpg');
 }
 
 .content ol {
@@ -179,7 +179,7 @@ body.step-page::before {
 
 /* Inspiration Page */
 body.inspiration-page::before {
-  background-image: url('images/ve6.jpg');
+  background-image: url('Images/ve6.jpg');
   filter: blur(4px) brightness(0.4);
 }
 
@@ -231,7 +231,7 @@ body.inspiration-page::after {
 
 /* Skills Page */
 body.skills-page::before {
-  background-image: url('images/ve2.jpg');
+  background-image: url('Images/ve2.jpg');
   filter: blur(3px) brightness(0.4);
 }
 
@@ -281,7 +281,7 @@ body.skills-page::after {
 
 /* Portfolio Page */
 body.portfolio-page::before {
-  background-image: url('images/ve7.jpg');
+  background-image: url('Images/ve7.jpg');
   filter: blur(4px) brightness(0.4);
 }
 
