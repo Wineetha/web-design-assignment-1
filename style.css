@@ -447,6 +447,15 @@ body.portfolio-page::after {
   }
 }
 
+/* === Additional Mobile Tweak === */
+@media (max-width: 480px) {
+  .content h1 {
+    font-size: 1.4em;
+    margin-top: 40px;
+    line-height: 1.2;
+  }
+}
+
 /* === Footer Center === */
 footer, .footer {
   text-align: center;
