@@ -169,7 +169,6 @@ body.step-page::before {
   animation: fadeSlideUp 0.8s ease-out forwards;
 }
 
-/* Animation delays for list */
 .content ol li:nth-child(1) { animation-delay: 0.2s; }
 .content ol li:nth-child(2) { animation-delay: 0.4s; }
 .content ol li:nth-child(3) { animation-delay: 0.6s; }
@@ -336,11 +335,6 @@ body.portfolio-page::after {
 
 /* Responsive Layout */
 @media (max-width: 768px) {
-  nav a {
-    display: block;
-    margin: 10px 0;
-  }
-
   .center-box {
     flex-direction: column;
     padding: 40px 20px;
@@ -436,28 +430,10 @@ body.portfolio-page::after {
   margin-right: 20px;
 }
 
-.future-project {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 20px;
-  background-color: rgba(255, 255, 255, 0.08);
-  padding: 20px;
-  border-radius: 16px;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
-  animation: slideInRight 0.9s ease-out forwards;
-  opacity: 0;
-}
-
 @media (max-width: 600px) {
   .future-project {
     flex-direction: column;
     text-align: center;
-    .content p,
-.center-box p {
-  font-size: 1.1em;
-}
-
   }
 
   .future-project img.project-image {
@@ -466,21 +442,9 @@ body.portfolio-page::after {
     width: 100%;
     max-width: 300px;
   }
-}
 
-footer {
-  background-color: rgba(0, 0, 0, 0.7);
-  color: #ffffff;
-  text-align: center;
-  padding: 20px 10px;
-  font-size: 0.9em;
-  margin-top: 40px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-@media (max-width: 600px) {
-  footer {
-    font-size: 0.8em;
-    padding: 15px 8px;
+  .content p,
+  .center-box p {
+    font-size: 1.1em;
   }
 }
