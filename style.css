@@ -333,52 +333,6 @@ body.portfolio-page::after {
   animation: bounce 1.8s infinite ease-in-out;
 }
 
-/* Responsive Layout */
-@media (max-width: 768px) {
-  .center-box {
-    flex-direction: column;
-    padding: 40px 20px;
-    text-align: center;
-  }
-
-  .skills-grid,
-  .future-projects-list,
-  .inspiration-vertical-cards {
-    grid-template-columns: 1fr !important;
-    flex-direction: column;
-  }
-
-  .future-project {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .inspiration-table img {
-    width: 100px;
-  }
-
-  .content h1 {
-    font-size: 1.8em;
-    margin-top: 80px;
-  }
-
-  .skill-card {
-    font-size: 0.9em;
-  }
-
-  .nav-button {
-    font-size: 0.9em;
-    padding: 8px 15px;
-  }
-
-  .inspiration-table th,
-  .inspiration-table td {
-    font-size: 0.8em;
-  }
-}
-
-/* === Enhancements for Home Page Layout === */
 .hero-section {
   display: flex;
   flex-wrap: wrap;
@@ -415,13 +369,6 @@ body.portfolio-page::after {
   font-size: 1.8em;
 }
 
-@media (max-width: 768px) {
-  .hero-section {
-    flex-direction: column;
-    text-align: center;
-  }
-}
-
 .future-project img.project-image {
   width: 200px;
   height: auto;
@@ -430,21 +377,25 @@ body.portfolio-page::after {
   margin-right: 20px;
 }
 
-@media (max-width: 600px) {
-  .future-project {
-    flex-direction: column;
-    text-align: center;
+/* === Responsive Fix for Mobile Nav (NEW CODE) === */
+@media (max-width: 768px) {
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 15px 10px;
   }
 
-  .future-project img.project-image {
-    margin-right: 0;
-    margin-bottom: 15px;
-    width: 100%;
-    max-width: 300px;
+  nav a {
+    display: inline-block !important;
+    margin: 8px 10px !important;
+    font-size: 1em !important;
+    white-space: nowrap;
   }
+}
 
-  .content p,
-  .center-box p {
-    font-size: 1.1em;
+@media (max-width: 480px) {
+  nav a {
+    font-size: 0.85em !important;
   }
 }
