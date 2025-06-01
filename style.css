@@ -117,6 +117,8 @@ nav a:hover {
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
   color: var(--text-color);
   animation: zoomIn 1.2s ease-out;
+  word-break: break-word;
+  line-height: 1.2;
 }
 
 /* Animations */
@@ -377,6 +379,10 @@ body.portfolio-page::after {
   display: inline-block;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
   font-size: 1.8em;
+  max-width: 100%;
+  word-break: break-word;
+  text-align: center;
+  box-sizing: border-box;
 }
 
 /* === Responsive Fixes === */
@@ -403,7 +409,6 @@ body.portfolio-page::after {
     width: 100px;
   }
 
-  /* ✅ Corrected selector */
   .text-content h1 {
     font-size: 1.8em;
     margin-top: 80px;
@@ -448,13 +453,16 @@ body.portfolio-page::after {
   }
 }
 
-/* === Additional Mobile Tweak === */
 @media (max-width: 480px) {
-  /* ✅ Corrected selector */
   .text-content h1 {
     font-size: 1.4em;
     margin-top: 30px;
     line-height: 1.2;
+  }
+
+  .highlight-box {
+    font-size: 1.2em;
+    padding: 8px 15px;
   }
 }
 
