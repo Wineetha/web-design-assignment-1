@@ -49,15 +49,19 @@ nav {
   position: sticky;
   top: 0;
   z-index: 100;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 nav a {
   color: var(--nav-text-color);
   text-decoration: none;
-  margin: 0 20px;
+  margin: 0 15px;
   font-weight: bold;
   font-size: 1.1em;
   transition: color 0.3s ease;
+  white-space: nowrap;
 }
 
 nav a:hover {
@@ -147,7 +151,7 @@ nav a:hover {
   100% { opacity: 1; transform: translateX(0); }
 }
 
-/* Step Page Specific */
+/* Step Page */
 body.step-page::before {
   background-image: url('Images/ve4.jpg');
 }
@@ -169,6 +173,7 @@ body.step-page::before {
   animation: fadeSlideUp 0.8s ease-out forwards;
 }
 
+/* Step List Delay */
 .content ol li:nth-child(1) { animation-delay: 0.2s; }
 .content ol li:nth-child(2) { animation-delay: 0.4s; }
 .content ol li:nth-child(3) { animation-delay: 0.6s; }
@@ -176,7 +181,7 @@ body.step-page::before {
 .content ol li:nth-child(5) { animation-delay: 1s; }
 .content ol li:nth-child(6) { animation-delay: 1.2s; }
 
-/* Inspiration Page */
+/* Inspiration */
 body.inspiration-page::before {
   background-image: url('Images/ve6.jpg');
   filter: blur(4px) brightness(0.4);
@@ -228,7 +233,7 @@ body.inspiration-page::after {
   box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
 }
 
-/* Skills Page */
+/* Skills */
 body.skills-page::before {
   background-image: url('Images/ve2.jpg');
   filter: blur(3px) brightness(0.4);
@@ -278,7 +283,7 @@ body.skills-page::after {
 .skill-card:nth-child(5) { animation-delay: 1s; }
 .skill-card:nth-child(6) { animation-delay: 1.2s; }
 
-/* Portfolio Page */
+/* Portfolio */
 body.portfolio-page::before {
   background-image: url('Images/ve7.jpg');
   filter: blur(4px) brightness(0.4);
@@ -308,9 +313,13 @@ body.portfolio-page::after {
   opacity: 0;
 }
 
-.future-project:nth-child(1) { animation-delay: 0.3s; }
-.future-project:nth-child(2) { animation-delay: 0.5s; }
-.future-project:nth-child(3) { animation-delay: 0.7s; }
+.future-project img.project-image {
+  width: 200px;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  margin-right: 20px;
+}
 
 .icon-title h2 {
   margin: 0;
@@ -333,6 +342,7 @@ body.portfolio-page::after {
   animation: bounce 1.8s infinite ease-in-out;
 }
 
+/* Hero Section */
 .hero-section {
   display: flex;
   flex-wrap: wrap;
@@ -369,33 +379,79 @@ body.portfolio-page::after {
   font-size: 1.8em;
 }
 
-.future-project img.project-image {
-  width: 200px;
-  height: auto;
-  border-radius: 12px;
-  object-fit: cover;
-  margin-right: 20px;
-}
-
-/* === Responsive Fix for Mobile Nav (NEW CODE) === */
+/* === Responsive Fixes === */
 @media (max-width: 768px) {
-  nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 15px 10px;
+  .hero-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .skills-grid,
+  .future-projects-list,
+  .inspiration-vertical-cards {
+    grid-template-columns: 1fr !important;
+    flex-direction: column;
+  }
+
+  .future-project {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .inspiration-table img {
+    width: 100px;
+  }
+
+  .content h1 {
+    font-size: 1.8em;
+    margin-top: 80px;
+  }
+
+  .skill-card {
+    font-size: 0.9em;
+  }
+
+  .nav-button {
+    font-size: 0.9em;
+    padding: 8px 15px;
+  }
+
+  .inspiration-table th,
+  .inspiration-table td {
+    font-size: 0.8em;
   }
 
   nav a {
-    display: inline-block !important;
-    margin: 8px 10px !important;
-    font-size: 1em !important;
-    white-space: nowrap;
+    font-size: 0.9em;
+    margin: 6px 10px;
   }
 }
 
-@media (max-width: 480px) {
-  nav a {
-    font-size: 0.85em !important;
+@media (max-width: 600px) {
+  .future-project {
+    flex-direction: column;
+    text-align: center;
   }
+
+  .future-project img.project-image {
+    margin-right: 0;
+    margin-bottom: 15px;
+    width: 100%;
+    max-width: 300px;
+  }
+
+  nav a {
+    font-size: 0.8em;
+    margin: 4px 8px;
+  }
+}
+
+/* === Footer Center === */
+footer, .footer {
+  text-align: center;
+  margin-top: 40px;
+  padding: 20px;
+  font-size: 0.9em;
+  color: #ccc;
 }
